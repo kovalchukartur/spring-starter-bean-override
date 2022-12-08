@@ -95,7 +95,7 @@ public class JacksonAutoConfiguration {
 
     // todo different from source class
     @Bean
-//    @ConditionalOnMissingBean
+    @ConditionalOnMissingBean
     public JsonMixinModule jsonMixinModule(ApplicationContext context) {
         List<String> packages = AutoConfigurationPackages.has(context) ? AutoConfigurationPackages.get(context)
             : Collections.emptyList();
